@@ -24,6 +24,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+
 // Verify Nodemailer configuration
 transporter.verify((error, success) => {
   if (error) {
